@@ -15,4 +15,12 @@ Yes, You can use your own database,password,username.
 - CRUD operation
 - User spring Security
 - Entity base programming
-
+# REST API testing URL
+- GET ALL, by http get request
+http://localhost:8080/api/todo
+- GET Perticular data, by http get request
+http://localhost:8080/api/todo?id=1
+- SAVE data, by http POST request
+http://localhost:8080/api/todo
+- UPDATE data, by http PUT request
+http://localhost:8080/api/todo?id=1
