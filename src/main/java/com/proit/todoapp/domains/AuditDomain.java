@@ -9,6 +9,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -20,12 +21,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class AuditDomain {
 	
 	//@JsonIgnore
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@Column(name = "created_at", nullable = false, updatable = false)
-	@CreationTimestamp
+	@CreatedDate
 	private Date createdAt;
 
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@Column(name = "updated_at", nullable = false)
 	@LastModifiedDate
 	private Date updatedAt;
